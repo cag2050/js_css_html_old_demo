@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 主线程从"任务队列"中循环读取事件，这种运行机制又称为Event Loop（事件循环）
+    setTimeout(function () {
+        console.log(2);
+    },1000);
+    // 虽然延时时间为0，但是此语句在任务队列，在主线程执行后，读取"任务队列"，执行
+    setTimeout(function () {
+        console.log(3);
+    },0);
+    // 先输出1，因为此语句在主线程，先执行
+    console.log(1);
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .over {
+            background-color: lightgray;
+            padding: 20px;
+            width: 40%;
+            float: left
+        }
+
+        .enter {
+            background-color: lightgray;
+            padding: 20px;
+            width: 40%;
+            float: right
+        }
+
+        h2 {
+            background-color: white;
+        }
+    </style>
+
+</head>
+<body>
+<p>不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件。对应mouseout</p>
+<p>只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件。对应mouseleave</p>
+<p>推荐使用mouseenter，子元素不会反复触发事件，否则在IE中经常有闪烁情况发生。</p>
+<h4>控制台查看事件触发情况：</h4>
+<div class="over">
+    <h2>被触发的 Mouseover 事件（事件写在外层灰色背景div上）：<span></span></h2>
+</div>
+<div class="enter">
+    <h2>被触发的 Mouseenter 事件（事件写在外层灰色背景div上）：<span></span></h2>
+</div>
+<script type="text/javascript" src="../js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+    x = 0;
+    y = 0;
+    $(document).ready(function () {
+        $("div.over").mouseover(function () {
+            console.log("mouseover事件触发");
+            $(".over span").text(x += 1);
+        });
+        $("div.over").mouseout(function () {
+            console.log("mouseout事件触发");
+        });
+        $("div.enter").mouseenter(function () {
+            console.log("mouseenter事件触发");
+            $(".enter span").text(y += 1);
+        });
+        $("div.enter").mouseleave(function () {
+            console.log("mouseleave事件触发");
+        });
+    });
+</script>
+</body>
+</html>  
