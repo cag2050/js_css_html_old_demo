@@ -26,11 +26,13 @@ var getJsFiles = function () {
 };
 
 var config = {
-    entry: getJsFiles(),
+    // entry: getJsFiles(),
+    entry: "./src/js/es6/generator_yield.js",
     output: {
-        // path: "build",
-        path: path.join(__dirname, "build" + jsEs6),
-        filename: "[name].js"
+        path: "./build/js/es6",
+        // path: path.join(__dirname, "build" + jsEs6),
+        // filename: "[name].js"
+        filename: "bundle.js"
     },
     module: {
         loaders: [
