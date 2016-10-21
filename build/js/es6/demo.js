@@ -50,6 +50,8 @@
 	 * Created by chenanguo on 2016/10/21.
 	 */
 	var aannn = {};
+	document.write("document的输出3333");
+	console.log("console输出");
 
 /***/ }
 /******/ ]);
