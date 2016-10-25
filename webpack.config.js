@@ -27,7 +27,7 @@ var getJsFiles = function () {
 
 var config = {
     // entry: getJsFiles(),
-    entry: "./src/js/es6/generator_yield.js",
+    entry: ["babel-polyfill","./src/js/es6/async_await.js"],
     output: {
         path: "./build/js/es6",
         // path: path.join(__dirname, "build" + jsEs6),
@@ -41,7 +41,7 @@ var config = {
                 exclude: "/node-modules/",
                 loader: "babel",
                 query: {
-                    presets: ["es2015"]
+                    presets: ["es2015","stage-0"]
                 }
             }
         ]
