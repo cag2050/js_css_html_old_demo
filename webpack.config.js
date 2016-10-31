@@ -27,7 +27,7 @@ var getJsFiles = function () {
 
 var config = {
     // entry: getJsFiles(),
-    entry: ["babel-polyfill","./src/js/es6/async_await.js"],
+    entry: ["babel-polyfill","./src/js/es6/map.js"],
     output: {
         path: "./build/js/es6",
         // path: path.join(__dirname, "build" + jsEs6),

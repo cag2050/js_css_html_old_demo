@@ -12,7 +12,6 @@ function timeOut(ms) {
 async function outputValue(str, ms) {
     await timeOut(ms);
     console.log(str);
-
 }
 
 outputValue("hello world", 5000);
