@@ -27,7 +27,8 @@ var getJsFiles = function () {
 
 var config = {
     // entry: getJsFiles(),
-    entry: "./src/js/es6/generator_yield.js",
+    entry: "./src/js/es6/demo.js",
+    //entry: "./src/js/es6/demo.js",
     output: {
         path: "./build/js/es6",
         // path: path.join(__dirname, "build" + jsEs6),
