@@ -27,7 +27,7 @@ var getJsFiles = function () {
 
 var config = {
     // entry: getJsFiles(),
-    entry: "./src/js/es6/demo.js",
+    entry: "./src/js/es6/for_of.js",
     //entry: "./src/js/es6/demo.js",
     //entry: ["babel-polyfill","./src/js/es6/map.js"],
     output: {
@@ -44,6 +44,7 @@ var config = {
                 loader: "babel",
                 query: {
                     presets: ["es2015","stage-0"]
+                    //presets: ["es2015"]
                 }
             }
         ]
