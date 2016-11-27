@@ -27,8 +27,12 @@ var getJsFiles = function () {
 
 var config = {
     // entry: getJsFiles(),
+<<<<<<< HEAD
     entry: "./src/js/es6/demo.js",
     //entry: "./src/js/es6/demo.js",
+=======
+    entry: ["babel-polyfill","./src/js/es6/map.js"],
+>>>>>>> 5badc489d4e5a43ddfbfe58c8d7d042ce4bd9a3e
     output: {
         path: "./build/js/es6",
         // path: path.join(__dirname, "build" + jsEs6),
@@ -42,7 +46,7 @@ var config = {
                 exclude: "/node-modules/",
                 loader: "babel",
                 query: {
-                    presets: ["es2015"]
+                    presets: ["es2015","stage-0"]
                 }
             }
         ]
